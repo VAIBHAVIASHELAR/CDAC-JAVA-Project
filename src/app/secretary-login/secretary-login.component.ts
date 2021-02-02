@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Society } from '../society';
+import { SocietyService } from '../society.service';
+
+@Component({
+  selector: 'app-secretary-login',
+  templateUrl: './secretary-login.component.html',
+  styleUrls: ['./secretary-login.component.css']
+})
+export class SecretaryLoginComponent implements OnInit {
+  user=new Society();
+  msg='';
+  constructor(private service:SocietyService,private router:Router) { }
+  ngOnInit(): void {
+  }
+  loginSecretary()
+  {
+    this.service.loginUserFromRemote(this.user).subscribe(
+      data=>{
+        console.log("response received..");
+        this.router.navigate(['/secretaryloginsuccess'])
+    },
+      error=>{
+        console.log("exception occur");
+        this.msg="Bad credentials ,plzzz enter valid email and password";
+    }
+    );
+
+  }
+}

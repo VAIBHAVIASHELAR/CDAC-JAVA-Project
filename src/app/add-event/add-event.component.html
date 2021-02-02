@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-0">
+    
+    <h3>Add Society</h3>
+    <form><!-- (ngSubmit)="onSubmit()"-->
+        <div class="form-group">
+            <label>Event Subject</label>
+            <input type="text" class="form-control" id="esub"[(ngModel)]="events.eSubject" name=esub>
+        </div>
+        <div class="form-group">
+            <label>Event Description</label>
+            <input type="text" class="form-control" id="address"[(ngModel)]="events.eDescription" name="address">
+        </div>
+        <div class="form-group">
+            <label>Event Occation</label>
+            <input type="text" class="form-control" id="city"[(ngModel)]="events.eOccation" name="city">
+        </div>
+        <div class="form-group">
+            <label>Event Venue</label>
+            <input type="text" class="form-control" id="pinCode"[(ngModel)]="events.eVenue" name="pinCode">
+        </div>
+        <div class="form-group">
+            <label>Event Date</label>
+            <input type="text" class="form-control" id="noOfHouses"[(ngModel)]="events.eDate" name="noOfHouses">
+        </div>
+        <div class="form-group">
+            <label>Event Expenditure</label>
+            <input type="text" class="form-control" id="status"[(ngModel)]="events.eExpenditure" name="status">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" id="EntryDate"[(ngModel)]="events.eStatus" name="EntryDate">
+        </div>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    
+    </div>
+    

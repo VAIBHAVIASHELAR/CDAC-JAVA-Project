@@ -1,0 +1,31 @@
+<h2>Society List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>sname</th>
+            <th>address</th>
+            <th>City</th>
+            <th>PinCode</th>
+            <th>TotalHouses</th>
+            <th>Status</th>
+            <th>EntryDate</th>   
+            
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let societydetails of society">
+            <td>{{societydetails.sId}}</td>
+            <td>{{societydetails.sName}}</td>
+            <td>{{societydetails.address}}</td>
+            <td>{{societydetails.city}}</td>
+            <td>{{societydetails.pinCode}}</td>
+            <td>{{societydetails.noOfHouses}}</td>
+            <td>{{societydetails.status}}</td>
+            <td>{{societydetails.EntryDate}}</td>
+            
+        </tr>    
+    </tbody>
+        
+</table>
